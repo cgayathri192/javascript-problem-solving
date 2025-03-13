@@ -1,0 +1,565 @@
+ //URL SPLIT
+// let str = "fb.com?name:user?age:20-gender^male"
+// let strr = str.split('?')
+// console.log(strr)
+// let x = strr[1].split(':')
+// console.log(x)
+// let y = strr[2].split('-')
+// console.log(y)
+// let z = y[1].split('^')
+// console.log(z)
+// let w = y[0].split(':')
+// console.log(w)
+// let obj = {}
+// obj[x[0]] = x[1]
+// obj[z[0]] = z[1]
+// obj[w[0]] = w[1]
+// console.log(obj)
+//URL SPLIT
+// let str = "abc?name?gayathri?age?21"
+// let abc = str.split('?')
+// let obj = {}
+// obj[abc[1]] = abc[2]
+// obj[abc[3]] = abc[4]
+// console.log(obj)
+//STR SPLIT
+// let str = "http:facebook.com/users?id=12&name=rajiv"
+// let data = str.split('?')[1]
+// console.log(data)
+// let idstring;
+// let namestring;
+// idstring = data.split('&')[0]
+// namestring=data.split('&')[1]
+// let id = idstring.split('=')
+// let name = namestring.split('=')
+// let obj = {}
+// obj[id[0]] = id[1]
+// obj[name[0]] = name[1]
+// console.log(obj)
+//TO PRINT TODAYS DATE
+// let date = new Date()
+// console.log(Date())
+// //COUNT OF D
+// let arr = [
+//   {
+//     name:'gayathri',
+//     gender:'female'
+//   },
+//   {
+//     name:'reshma',
+//     gender:'male'
+//   }
+// ]
+// count = 0
+// arr.forEach(x=>{
+//   y = x.gender.split('')
+//   y.forEach(z=>{
+//     if(z=='a'){
+//       count++
+//     }
+//   })
+// })
+// console.log(count)
+//NUMBER OF ZEROS OR ONES COUNT
+// let arr = [[0,1,1],[1,0,0],[0,1,0],[1,1,1]]
+// count = 0
+// let s = arr.flat(1)
+// console.log(s)
+// let a = s.forEach(x =>{
+//   if(x==0){
+//     count++
+//   }
+// })
+// console.log(count)
+//STRING WORD COUNT
+// let str = "my name is gayathri my name is gayathri"
+// let x = str.match(/gayathri/gi).length
+// console.log(x)
+//LETTER OF OCCURENCES
+// let str = "gayathri is a good girl"
+// let x = str.split('')
+// console.log(x)
+// let count = {}
+// x.forEach(x=>{
+//   count[x] = (count[x]|0)+1
+// })
+// console.log(count)
+// (OR)
+// let str = 'gayathri is a good girl'
+// let strr = str.split('')
+// console.log(strr)
+// let output = {}
+// strr.forEach((x) => {
+//   let count = output[x]
+//   if (output[x]) {
+//     let count = output[x]
+//     count++
+//     output[x] = count
+//   }
+//   else {
+//     output[x] = 1
+//   }
+// })
+// console.log(output)
+//TO PRINT THE ID AND NAME IN A DATA
+// let data = ["vasu:1","raju:2","vishnu:3"]
+// let arr = []
+// data.forEach(x=>{
+//   let obj = {}
+//   let a = x.split(':')
+//   console.log(a)
+//   obj.name = a[0]
+//   obj.id = a[1]
+//   console.log(obj)
+//   arr.push(obj)
+// })
+// console.log(arr)
+//TO FIND THE LARGEST NAME
+// let arr = ["gayathri","vani","reshma","praveenaar"]
+// arr.sort((a,b)=>{
+//  return  b.length-a.length
+// })
+// console.log(arr[0])
+//TO FIND THE SMALLEST NAME
+// let arr = ["gayathri","reshma","vani"]
+// let small = arr.reduce(function(a,b){
+//   return a.length<b.length ? a:b
+// })
+// console.log(small)
+//TO FIND THE LONGEST NAME
+// let arr = ["gayathri","reshma","vani","praveena"]
+// let long = arr.reduce(function(a,b){
+//   return a.length>b.length ? a:b
+// })
+// console.log(long)
+//TO ADD MR AND MRS BEFORE NAME
+// const users = [
+//   {
+//     firstname:'gayathri',
+//     secondname:'chennareddy',
+//     gender:'female'
+//   },
+//   {
+//     firstname:'reshma',
+//     secondname:'annamreddy',
+//     gender:'female'
+//   },
+//   {
+//     firstname:'sudhakar',
+//     secondname:'chennareddy',
+//     gender:'male'
+//   }
+// ]
+// let arr = users.forEach(x=>{
+//   if(x.gender == 'male'){
+//     x.fullname = 'mr.'+x.firstname+x.secondname
+//   }
+//   else{
+//     x.fullname = 'mrs.' + x.firstname+x.secondname
+//   }
+// })
+// console.log(users)
+//TO PRINT THE OBJECT KEYS
+// let obj = {name:{age:{address:{company:'mouritech'}}}}
+// let x  = []
+// let a = Object.keys(obj.name.age.address)
+// let b = Object.keys(obj.name.age)
+// let c = Object.keys(obj.name)
+// let d = Object.keys(obj)
+// x.push(a)
+// x.push(b)
+// x.push(c)
+// x.push(d)
+// console.log(x.flat())
+//STRING ADD
+// let m  = 8324
+// const arr = m.toString().split('')
+// let num = 0
+// arr.forEach(x=>{
+//   num += parseInt(x)
+// })
+// console.log(num)
+//FUNCTION INSIDE ANOTHER FUNCTION
+// function myfunc(a,b){
+//   return a+b
+// }
+// x=myfunc(2,3)
+// console.log(x)
+// function newfunc(x,y){
+//   return x+y
+// }
+// z = newfunc(x,4)
+// console.log(z)
+// console.log(x+z)
+//TO PRINT ODD NUMBER NAMES
+// let data = [
+//   {
+//     id:1,
+//     name:'gayathri'
+//   },
+//   {
+//     id:2,
+//     name:'vani'
+//   },
+//   {
+//     id:3,
+//     name:'chennareddy'
+//   },
+//   {
+//     id:4,
+//     name:'degapudi'
+//   }
+// ]
+// let output = []
+// data.forEach(x=>{
+//   if(x.id%2==0){
+//     output.push(x.name)
+//   }
+// })
+// console.log(output.join(''))
+//REMOVE NON-REPEATED DUPLICATES
+// let arr = [1,2,2,3]
+// let a = arr.filter((value,index)=>arr.indexOf(value)!=index)
+// let b  = arr.filter((value,index)=>arr.indexOf(value)==index)
+// console.log(a)asa
+// console.log(b)
+// console.log(b.filter(x=>!a.includes(x)))
+//NUMBER REVERSAL
+// let num =1212
+// let x  = num.toString().split('').reverse().join('')
+// console.log(x)
+//QUOTE EXTRACTION
+// const quote= '"The unexaminedlife is not worth living."-socrates'
+// let data = quote.split('-')[0]
+// console.log(data.replace('.'))
+//STRING REVERSAL
+// let str = "abcdef"
+// for(var i  = str.length-1;i>=0;i--){
+//   console.log(str[i])
+// }
+//STRING REVERSAL
+// let str = "abcdef"
+// let x = str.split('').reverse().join('')
+// console.log(x)
+//TO ADD FIRST NAME AND LAST NAME
+// let users = [
+//   {
+//     firstname:'gayathri',
+//     secondname:'chennareddy'
+//   }
+// ]
+// let x = users.map((x)=>x.firstname+x.secondname)
+// console.log(x)
+//TO PUSH GENDER
+// let users = [
+//   {
+//     name:'gayathri',
+//     lastname:'chennareddy',
+//     gender:'female'
+//   },
+//   {
+//     name:'sudhakar',
+//     lastname:'degapudi',
+//     gender:'male'
+//   }
+// ]
+// let gender = []
+// users.forEach(x=>{
+//   if(x.gender == 'female'){
+//   x.gen  = 'mrs.'
+//   }
+//   else{
+//     x.gen = 'mr.'
+//   }
+// })
+// console.log(users)
+//SORT NAMES IN ALPHABETICALL ORDER
+// const users = [
+//   {
+//     name:'gayathri',
+//     age:21,
+//     salary:2345,
+//     gender:'female'
+//   },
+//   {
+//     name:'sudha',
+//     age:34,
+//     salary:23456,
+//     gender:'male'
+//   },
+//   {
+//     name:'reshu',
+//     age:42,
+//     salary:23457,
+//     gender:'female'
+//   },
+
+// ]
+// users.sort((a,b)=>
+//   a.name.localeCompare(b.name)
+// )
+// console.log(users)
+//FACTORS
+// const num = 12;
+// for(let i=1;i<=num;i++){
+//   if(num%i==0){
+//     console.log(i)
+//   }
+// }
+//ODD
+// let arr = [1,2,3,4,5,6,7,8,9,10]
+// const odd = arr.filter(x=>x%2!=0)
+// console.log(odd)
+//EVEN
+// let arr = [1,2,3,4,5,6,7,8]
+// const even = arr.filter(x=>x%2==0)
+// console.log(even)
+//STRING SEPERATE A NUMBER AND SMALL AND CAPITAL
+// let str = "hello1234GAYATHRI"
+// let x = str.split('')
+// let a = str.match(/[a-z]/g).join('')
+// let b = str.match(/[A-Z]/g).join('')
+// let c = str.match(/[1-9]/g).join('')
+// console.log(a)
+// console.log(b)
+// console.log(c)
+//OBJECT COUNT ZEROS
+// let obj = {
+//   name:'gayathri',
+//   salary:200000000
+// }
+// let value = obj.salary.toString().split('')
+// let output = value.filter(x=>x=='0')
+// console.log(output.length)
+// obj.salary = output.length
+// console.log(obj)
+//ARRAY OF OBJECTS
+// let users = [
+//   {
+//     name:'gayathri',
+//     salary:200000,
+//     age:21
+
+//   },
+//   {
+//     name:'vani',
+//     salary:300000,
+//     age:34
+//   },
+//   {
+//     name:'reshu',
+//     salary:400000,
+//     age:45
+//   }
+// ]
+// users.forEach((x)=>{
+//   if(x.age>30){
+//     console.log(x.salary)
+//   }
+// })
+
+//REDUCE METHOD
+// let arr = [1,2,3,4,5]
+// const newarr = arr.reduce((a,b)=>a+b)
+// console.log(newarr)
+//INDEX OF
+// let arr = [1,2,3,4,5,6]
+// const newarr = arr.indexOf(2)
+// console.log(newarr)
+// (OR)
+// let arr = [1,2,3,4,5,6]
+// const newarr = arr.findIndex(x=>x==2)
+// console.log(newarr)
+//SEPERATE A STRING AND NUMBER IN AN ARRAY
+// let arr = ["gayathri",1,2,"reshma"]
+// let num = []
+// let str = []
+// arr.forEach(x=>{
+//   if(isNaN(x)){
+//     str.push(x)
+//   }
+//   else{
+//     num.push(x)
+//   }
+// })
+// console.log(str)
+// console.log(num)
+//PRIME NUMBER IN AN ARRAY
+// let arr = [1,2,3,4,5,6,7,8]
+// const newarr = arr.filter(x=>{
+//   for(let i=2;i<x;i++){
+//     if(x%i==0)
+//       return false
+//   }
+//       return x!=1
+// })
+// console.log(newarr)
+//REMOVE DUPLICATE ELEMENTS IN AN ARRAY
+// let arr = [1,2,2,3,3]
+// const newarr = arr.filter((value,index)=>arr.indexOf(value)!=index)
+// console.log(newarr)
+//DUPLICATES IN AN ARRAY
+// let arr = [1,2,3,2]
+// const newarr = arr.filter((value,index)=>arr.indexOf(value)==index)
+// console.log(newarr)
+// TO ADD THE SALARY IF THEIR AGES ARE MORE THAN 30
+// let users = [
+//   {
+//     name:'gayathri',
+//     salary:200000,
+//     age:21
+
+//   },
+//   {
+//     name:'vani',
+//     salary:300000,
+//     age:34
+//   },
+//   {
+//     name:'reshu',
+//     salary:400000,
+//     age:45
+//   }
+// ]
+// add = 0
+// users.forEach((x)=>{
+//   if(x.age>30){
+//     console.log(x.salary)
+//     a = x.salary
+//     y = parseInt(a)
+//     add += y
+    
+//   }
+
+// })
+// console.log(add)
+//FIRST LETTER CAPITAL
+// let arr = ['Kiran','gayathri','muni']
+// arr.forEach(x=>{
+//   console.log(x[0].toUpperCase()+x.slice(1))
+// })
+//TO GET THE STR IN ALPHABETICAL ORDER
+//let str="a-c-d-e-n-b-z-l-w-f-x-j-m"
+// console.log(str.split('-').sort().toString().replaceAll(',','-'))
+// let str="a-c-d-e-n-b-z-l-w-f-x-j-m"
+// console.log(str.split('-').sort().toString().replaceAll(',','-'))
+// let str = "gayathri"
+// let arr = str.split('')
+// console.log(arr)
+// let arr1=arr.filter((x,y)=>arr.indexOf(x)!=y)
+// console.log(arr1)
+// let num=5
+// for(let i=1;i<=10;i++){
+//   let a=num*i
+//   console.log(num,"*",i,'=',a)
+// }
+let arr = ["visk","vzm","vizag"]
+output = []
+arr.forEach(x=>{
+  let obj = {}
+  obj.name  = x
+  obj.count = x.length
+  output.push(obj)
+})
+console.log(output)
+// let users = [
+//   {
+//     name:'gayataaahri',
+//     age:21
+//   }
+// ]
+// count = 0
+// users.forEach(x=>{
+//   y = x.name.split('')
+//   console.log(y)
+//   y.forEach(z=>{
+//     if(z=='a'){
+//       count++
+//     }
+//   })
+//   x.count = count
+// })
+// console.log(users)
+
+// console.log(count)
+let data = 'good morningn this is rajiv varma'
+let x = data.split('')
+console.log(x)
+let y = x.filter((value,index)=>x.indexOf(value)==index)
+console.log(y)
+let data = "fb.com?name-rajiv-23?age"
+// let data = "fb.com?name-rajiv-23?age"
+// let x = data.split('?')
+// console.log(x)
+// let y = x[1].split('-')
+// console.log(y)
+// let z = x[2].split('-')
+// console.log(z)
+// let w = y[0].split('?')
+// console.log(w)
+// let a = y[1].split('-')
+// console.log(a)
+// let v = y[2].split('-')
+// console.log(v)
+// let obj = {}
+// obj[w[0]] = a[0]
+// obj[z[0]] = v[0]
+// console.log(obj)
+// let arr = [
+//   { name: 'andhra', city: ['nellore', 'guntur'] },
+//   { name: 'telangana', city: ['Hyd', 'varangal'] },
+// ];
+// let a = [];
+// let b = [];
+// arr.forEach((x) => {
+//   b.push(x.name);
+// });
+// let obj = {};
+// let objj = {};
+// let ob = {};
+// objj.name = arr[0].city[0];
+// objj.state = arr[0].name;
+// ob.name = arr[0].city[1];
+// ob.state = arr[0].name;
+// a.push(objj);
+// a.push(ob);
+// obj.states = b;
+// obj.cities = a;
+// console.log(obj);
+// let input = [
+//   { state: 'andhra', cities: ['nellore', 'kurnool'] },
+//   { state: 'tamil nadu', cities: ['chennai', 'madhurai'] },
+// ];
+// output = {};
+// let state = [];
+// let cities = [];
+// input.forEach((x) => {
+//   state.push(x.state);
+//   x.cities.forEach((c) => {
+//     let obj = {};
+//     obj.state = x.state;
+//     console.log(obj.state);
+//     obj.city = c;
+//     console.log(obj.city);
+//     cities.push(obj);
+//   });
+// });
+// console.log(state);
+// console.log(cities);
+// output.cities = cities;
+// output.state = state;
+// console.log(output);
+// let num = 6
+// if(num%2==0&num%3==0){
+//   console.log('it is divisible')
+// }
+// else{
+//   console.log('it is not divisible')
+// }
+// let arr = [1,2,2,3]
+// arr.forEach((x,y)=>{
+//   if(arr.indexOf(x)!=y){
+//     console.log(x)
+//   }
+// })
+
